@@ -9,8 +9,8 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state , action) => {
       state.todoList.push({task : action.payload, taskId : state.taskId + 1 })
+      state.taskId =  state.taskId + 1
     },
-
     updateTodo: (state , action) => {
        state.todoList = state.todoList.map(item => {
         if (item.taskId === action.payload.taskId) {

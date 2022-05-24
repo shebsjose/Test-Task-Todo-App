@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import DeleteTodo from "./deleteTOdo";
 import EditTodo from "./edit";
 import LikeTodo from "./like";
@@ -23,17 +23,17 @@ const TodoList = () => {
                     {todos.map((todo) => {
                       return (
                         <tr key={todo.taskId}>
-                          <td  className="px-6 py-4 whitespace-nowrap">
+                          <td  className="px-4 py-2 whitespace-nowrap">
                             {todo.task}
                           </td>
-                          <td  className="px-6 py-4 whitespace-nowrap">
+                          <td  className="px-4 py-2 whitespace-nowrap">
                             <DeleteTodo  deleteId={todo.taskId} /> 
                           </td>
-                          <td  className="px-6 py-4 whitespace-nowrap">
+                          <td  className="px-4 py-2 whitespace-nowrap">
                            <EditTodo updateId={todo.taskId} todo={todo} />
                           </td>
-                          <td  className="px-6 py-4 whitespace-nowrap">
-                            <LikeTodo todo={todo} />
+                          <td  className="px-4 py-2 whitespace-nowrap">
+                            <LikeTodo/>
                           </td>
                         </tr>
                       );

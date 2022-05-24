@@ -2,12 +2,12 @@ import {  useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-const LikeTodo = ({ todo }) => {
+const LikeTodo = () => {
   
   const[like, setLike] = useState(false);
   const handleLike = () => {
    setLike(!like);
-   
+
   };
 
   return (
